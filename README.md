@@ -8,7 +8,7 @@ All configuration is done to start a blanck project.
 
 ## Features
 
-- Get location request permission to access GPS
+- Get location requesting the permission to access GPS
 - Access information from device
 - Access API openweathermap to get the weather
 - Unit test to test the screen and location functionality
@@ -23,6 +23,7 @@ This prototype uses a number of open source projects to work properly:
 - [Detox] - Gray box end-to-end testing and automation library for mobile apps.
 - [Jest] - Jest is a JavaScript testing framework maintained by Facebook
 - [Axios] - Promise based HTTP client for the browser and node.js
+- [OpenWeatherMap] - OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API
 
 And of course this repository itself is open source with a public repository on GitHub.
 
