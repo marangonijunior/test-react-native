@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import * as Device from "expo-device";
 
-import { getUniqueId } from "react-native-device-info";
 import Weather from "../components/weather";
 
 export default function Monitor() {
-  const [deviceID, setDeviceID] = useState<string>("");
+  const [deviceName, setDeviceName] = useState<any>("");
+  const [deviceVersion, setDeviceVersion] = useState<any>("");
 
   useEffect(() => {
-    setDeviceID(getUniqueId());
+    setDeviceName(Device.osName);
+    setDeviceVersion(Device.osVersion);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Device ID</Text>
-      <Text>{deviceID != "unknown" ? deviceID : "- - -"}</Text>
+      <Text>Device NAME</Text>
+      <Text testID="NAME">{deviceName && deviceName}</Text>
+      <Text>Device VERSION</Text>
+      <Text>{deviceVersion != "unknown" ? deviceVersion : "- - -"}</Text>
       <Weather />
     </View>
   );

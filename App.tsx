@@ -1,6 +1,8 @@
-import { StatusBar } from "expo-status-bar";
+import { registerRootComponent } from "expo";
+
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
 import Monitor from "./pages/monitor";
 
 export default function App() {
@@ -20,3 +22,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
+registerRootComponent(App);

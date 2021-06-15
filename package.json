@@ -1,28 +1,51 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "test-react-native",
+  "version": "0.0.0",
+  "description": "Test React Native Expo + Detox!",
+  "author": "Hednei C MarangoniJunior",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "test": "detox test --configuration ios"
   },
   "dependencies": {
     "expo": "^41.0.1",
+    "expo-device": "~3.2.0",
     "expo-location": "^12.0.4",
-    "expo-permissions": "^12.0.1",
+    "expo-splash-screen": "~0.10.2",
     "expo-status-bar": "~1.0.4",
+    "expo-updates": "^0.5.5",
+    "jest": "^27.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-device-info": "^8.1.3",
+    "react-native": "~0.63.4",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-reanimated": "~2.1.0",
+    "react-native-screens": "~3.0.0",
+    "react-native-unimodules": "~0.13.3",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
+    "detox": "^18.17.0",
+    "detox-expo-helpers": "^0.6.0",
     "typescript": "~4.0.0"
   },
-  "private": true
+  "jest": {
+    "preset": "react-native"
+  },
+  "private": true,
+  "detox": {
+    "configurations": {
+      "ios.sim": {
+        "binaryPath": "bin/Exponent-1.19.0.app",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    }
+  }
 }
