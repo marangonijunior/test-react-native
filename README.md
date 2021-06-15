@@ -1,8 +1,6 @@
 # marangonijunior
 ## REACT NATIVE + EXPO + DETOX + AXIOS
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 This is a prototype to create a app using React Native, Expo and Detox to test
 All configuration is done to start a blanck project.
 
