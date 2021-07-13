@@ -19,7 +19,6 @@
   */
  const request = (options:any) => {
    const onSuccess = (response:any) => {
-     // console.debug('Request Successful!', response);
      return Promise.resolve(response.data);
    }
  
@@ -27,11 +26,9 @@
      console.error('Request Failed:', error.config);
  
      if (error.response) {
-       // Request was made but server responded with something
        console.error('Status:',  error.response.status);
        console.error('Data:',    error.response.data);
        console.error('Headers:', error.response.headers);
- 
      } else {
        // Something else happened while setting up the request
        console.error('Error Message:', error.message);

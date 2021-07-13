@@ -1,15 +1,14 @@
 # marangonijunior
-## REACT NATIVE + EXPO + DETOX + AXIOS
+## REACT NATIVE + EXPO + DETOX + AXIOS + PAPER
 
 This is a prototype to create a app using React Native, Expo and Detox to test
 All configuration is done to start a blanck project.
 
 ## Features
 
-- Get location requesting the permission to access GPS
-- Access information from device
-- Access API openweathermap to get the weather
-- Unit test to test the screen and location functionality
+- Load products
+- Controle troller
+- Add and remove items from troller
 
 ## Tech
 
@@ -21,7 +20,8 @@ This prototype uses a number of open source projects to work properly:
 - [Detox] - Gray box end-to-end testing and automation library for mobile apps.
 - [Jest] - Jest is a JavaScript testing framework maintained by Facebook
 - [Axios] - Promise based HTTP client for the browser and node.js
-- [OpenWeatherMap] - OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API
+- [react-native-storage] - This is a local storage wrapper for both react native apps (using AsyncStorage) and web apps (using localStorage). ES6 syntax, promise for async load, fully tested with jest.
+- [react-native-paper] - Paper is a collection of customizable and production-ready components for React Native, following Google’s Material Design guidelines.
 
 And of course this repository itself is open source with a public repository on GitHub.
 
@@ -50,8 +50,6 @@ For test with detox, run the project on iOS simulator and let the METRO terminal
 ```sh
 yarn test
 ```
-**A test will purposely fail, when opening the application it is necessary to allow or not the use of the GPS*
-
 
 
 ## License
